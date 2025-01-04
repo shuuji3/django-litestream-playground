@@ -1,0 +1,6 @@
+dbs:
+- path: db.sqlite3
+  replicas:
+  - type: gcs
+    bucket: shuuji3-litestream
+    path: django-litestream-playground/db.sqlite3
