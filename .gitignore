@@ -12,3 +12,6 @@ wheels/
 # litestream
 .db.sqlite3-litestream/
 db.sqlite3*
+
+# app
+.env
