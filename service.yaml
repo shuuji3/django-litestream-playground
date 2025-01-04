@@ -1,0 +1,13 @@
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: django-litestream-playground
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: '1'
+    spec:
+      containers:
+      - image: asia-east1-docker.pkg.dev/shuuji3/cloud-run-source-deploy/django-litestream-playground
