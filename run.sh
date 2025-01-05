@@ -9,7 +9,6 @@ else
   uv run litestream restore -config litestream.yaml -if-replica-exists db.sqlite3
 fi
 
-uv run manage.py collectstatic --noinput
 uv run manage.py migrate
 
 # Run litestream with your app as the subprocess.
