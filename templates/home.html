@@ -5,12 +5,23 @@
 </head>
 <body>
 <main>
-  <p>We have the following tables in <code>db.sqlite3</code> replicated by <a href="https://litestream.io/">litestream</a>.</p>
-  <ul>
-    {% for _, name, _, num, _ in tables %}
-      <li>{{ name }} ({{ num }})</li>
-    {% endfor %}
-  </ul>
+  <p>We have the following tables in <code>db.sqlite3</code> replicated by <a
+    href="https://litestream.io/">litestream</a>.</p>
+  <dl>
+    <dt>Table names:</dt>
+    <dd>
+      {% for name in tables %}
+        <li>{{ name }}</li>
+      {% endfor %}
+    </dd>
+    <dt>Index names:</dt>
+    <dd>
+      {% for name in index_tables %}
+        <li>{{ name }}</li>
+      {% endfor %}
+
+    </dd>
+  </dl>
 </main>
 </body>
 </html>
