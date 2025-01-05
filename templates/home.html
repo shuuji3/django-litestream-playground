@@ -1,0 +1,16 @@
+{% load static %}
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="{% static 'css/pico.classless.min.css' %}">
+</head>
+<body>
+<main>
+  <p>We have the following tables in <code>db.sqlite3</code> replicated by <a href="https://litestream.io/">litestream</a>.</p>
+  <ul>
+    {% for _, name, _, num, _ in tables %}
+      <li>{{ name }} ({{ num }})</li>
+    {% endfor %}
+  </ul>
+</main>
+</body>
+</html>
