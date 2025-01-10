@@ -9,6 +9,6 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 COPY . .
 
 RUN uv sync --frozen
-RUN SECRET_KEY=x DEBUG=x uv run manage.py collectstatic --noinput
+RUN SECRET_KEY=x DEBUG=false uv run manage.py collectstatic --noinput
 
 CMD ["./run.sh"]
